@@ -18,3 +18,14 @@ pnpm dev
 bun dev
 ```
 
+## Inicializar prisma
+
+```bash
+npx prisma studio
+```
+
+## Inicializar inngest
+
+```bash
+npx inngest-cli@latest dev
+```
