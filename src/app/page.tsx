@@ -6,23 +6,32 @@ import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import { Input } from "@/components/ui/input"; 
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const route = useRouter();
   const [value, setValue] = useState("");
-  const trpc = useTRPC();
 
-  const invoke = useMutation(trpc.invoke.mutationOptions({
-    onSuccess: () =>{
-      toast.success("Background job started")
-    }
+  const trpc = useTRPC();
+  const createProject = useMutation(trpc.projects.create.mutationOptions({
+    onError: (error) => {
+      toast.error(error.message);
+    },
+    onSuccess: (data) => {
+      route.push(`/projects/${data.id}`);
+    },
   }));
 
   return (
-    <div className="p-4 max-w-7xl mx-auto">
+    <div className="h-screen w-screen flex items-center justify-center">
+      <div className="max-w-7xl mx-auto flex items-center flex-col gap-y-4 justify-center">
       <Input value={value} onChange={(e) => setValue(e.target.value)} />
-      <Button disabled={invoke.isPending} onClick={() => invoke.mutate({ value: value })}>
-        Invoke Background Ga :D
+      <Button 
+        disabled={createProject.isPending}
+        onClick={() => createProject.mutate({ value: value })}>
+        Enviar
       </Button>
+      </div>
     </div>
   );
 };

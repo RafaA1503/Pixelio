@@ -35,7 +35,25 @@ npx inngest-cli@latest dev
 ```bash
 e2b auth login
 ```
+## Configurar api_key sanbox 
+```
+set E2B_API_KEY= api_key
+```
+## crear template 
+```
+e2b sandbox list
+```
+## SandBox Log
+Log
+```
+e2b sandbox logs
+```
+## Ejecutar Template
 
+Ten en cuenta en tener docker instalado y desactivar el servidor , inngest y prisma
+```bash
+e2b template build --name nombre --cmd "/compile_page.sh"
+```
 ## Inicializar docker 
 
 
@@ -43,6 +61,7 @@ e2b auth login
 e2b template publish -t id_team 
 
 ```
+
 
 ### INSTA code-interprete
 

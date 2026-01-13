@@ -1,16 +1,17 @@
 # This is a config for E2B sandbox template.
-# You can use template ID (jg9lykanbgei0ur6jd1a) or template name (pixelionextjs-test2) to create a sandbox:
+# You can use template ID (6lwnp6j29fbzf4fi45pm) or template name (pixelionextjsx-v3) to create a sandbox:
 
 # Python SDK
 # from e2b import Sandbox, AsyncSandbox
-# sandbox = Sandbox.create("pixelionextjs-test2") # Sync sandbox
-# sandbox = await AsyncSandbox.create("pixelionextjs-test2") # Async sandbox
+# sandbox = Sandbox.create("pixelionextjsx-v3") # Sync sandbox
+# sandbox = await AsyncSandbox.create("pixelionextjsx-v3") # Async sandbox
 
 # JS SDK
 # import { Sandbox } from 'e2b'
-# const sandbox = await Sandbox.create('pixelionextjs-test2')
+# const sandbox = await Sandbox.create('pixelionextjsx-v3')
 
 team_id = "ab8fa10c-29f7-4371-8a03-9bc9e06dcc5e"
+start_cmd = "/compile_page.sh"
 dockerfile = "e2b.Dockerfile"
-template_name = "pixelionextjs-test2"
-template_id = "jg9lykanbgei0ur6jd1a"
+template_name = "pixelionextjsx-v3"
+template_id = "6lwnp6j29fbzf4fi45pm"

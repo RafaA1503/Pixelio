@@ -12,15 +12,49 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+
+model Project {
+  id String @id @default(uuid())
+  name String
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+
+  messages Message[]
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  content   String?
-  published Boolean @default(false)
-  authorId  Int
+enum MessageRole{
+  USER
+  ASSISTANT
 }
+
+enum MessageType{
+  RESULT
+  ERROR
+}
+
+model Message {
+  id String @id @default(uuid())
+  content String
+  role MessageRole
+  type MessageType
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+
+  projectId String
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade )
+  
+  fragment Fragment?
+}
+
+model Fragment {
+  id String @id @default(uuid())
+  messageId String @unique
+  message Message @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  sandboxUrl String
+  title String
+  files Json
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
+
