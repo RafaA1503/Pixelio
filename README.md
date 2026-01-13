@@ -48,6 +48,12 @@ Log
 ```
 e2b sandbox logs
 ```
+## Ejecutar Template
+
+Ten en cuenta en tener docker instalado y desactivar el servidor , inngest y prisma
+```bash
+e2b template build --name nombre --cmd "/compile_page.sh"
+```
 ## Inicializar docker 
 
 
@@ -55,6 +61,7 @@ e2b sandbox logs
 e2b template publish -t id_team 
 
 ```
+
 
 ### INSTA code-interprete
 
