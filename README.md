@@ -30,6 +30,28 @@ npx prisma studio
 npx inngest-cli@latest dev
 ```
 
+## Login E2b
 
-###
-<img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/f3d6991b-5977-47ec-b71b-5dfa0646f20c" />
+```bash
+e2b auth login
+```
+
+## Inicializar docker 
+
+
+```bash
+e2b template publish -t id_team 
+
+```
+
+### INSTA code-interprete
+
+```bash
+npm i @e2b/code-interprete
+
+```
+
+
+
+
+
