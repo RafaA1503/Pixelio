@@ -7,6 +7,7 @@ import { inngest } from "./client";
 import { getSandbox, lastAssistantTextMessageContent } from "./utils";
 
 import { PROMPT } from "@/prompt";
+import { prisma } from "@/lib/db";
 
 
 export const helloWorld = inngest.createFunction(
@@ -15,7 +16,7 @@ export const helloWorld = inngest.createFunction(
   async ({ event, step }) => {
 
     const sandboxId = await step.run("get-sandbox-id", async () =>{
-      const sandbox = await Sandbox.create("pixelionextjs-test2")
+      const sandbox = await Sandbox.create("pixelionextjsx-v3")
       return sandbox.sandboxId;
     })
     const codeAgent = createAgent({
@@ -149,6 +150,23 @@ export const helloWorld = inngest.createFunction(
       const host = sandbox.getHost(3000);
       return `https://${host}`;
     })
+
+    await step.run("save-result", async () =>{
+      return await prisma.message.create({
+        data:{
+          content: result.state.data.summary,
+          role: "ASSISTANT",
+          type: "RESULT",
+          fragment:{
+            create: {
+              sandboxUrl: sandboxURL,
+              title: "Fragment",
+              files: result.state.data.files,
+            },
+          },
+        },
+      })
+    });
     return { 
       url: sandboxURL,
       title: "Fragment",

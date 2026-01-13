@@ -35,7 +35,19 @@ npx inngest-cli@latest dev
 ```bash
 e2b auth login
 ```
-
+## Configurar api_key sanbox 
+```
+set E2B_API_KEY= api_key
+```
+## crear template 
+```
+e2b sandbox list
+```
+## SandBox Log
+Log
+```
+e2b sandbox logs
+```
 ## Inicializar docker 
 
 
@@ -52,8 +64,6 @@ npm i @e2b/code-interprete
 ```
 
 
-###
-<img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/f3d6991b-5977-47ec-b71b-5dfa0646f20c" />
 
 
 
