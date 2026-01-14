@@ -63,14 +63,3 @@ e2b template publish -t id_team
 ```
 
 
-### INSTA code-interprete
-
-```bash
-npm i @e2b/code-interprete
-
-```
-
-
-
-
-
