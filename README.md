@@ -62,15 +62,10 @@ e2b template publish -t id_team
 
 ```
 
+## Links SandBox dashboard
 
-### INSTA code-interprete
+https://e2b.dev/sign-in
 
-```bash
-npm i @e2b/code-interprete
+## DataBase
 
-```
-
-
-
-
-
+https://console.neon.tech/
