@@ -58,8 +58,7 @@ e2b template build --name nombre --cmd "/compile_page.sh"
 
 
 ```bash
-e2b template publish -t id_team 
-
+e2b template publish -t id_team
 ```
 
 ## Links SandBox dashboard
@@ -69,3 +68,5 @@ https://e2b.dev/sign-in
 ## DataBase
 
 https://console.neon.tech/
+
+<img width="1909" height="1137" alt="image" src="https://github.com/user-attachments/assets/5598c267-b8ca-4887-b42d-e560e6d5d188" />
