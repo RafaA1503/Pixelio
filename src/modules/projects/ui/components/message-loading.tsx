@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 
 const ShimmerMessages = () => {
     const messages = [
-        "Thinking...",
-        "Loading....",
-        "Generating...",
-        "Analyzing you request...",
-        "Building your website....",
-        "Crafting Component...",
-        "Optimizing layout...",
-        "Adding final touches....",
-        "Almost ready..."
+        "Pensando...", 
+        "Cargando...", 
+        "Generando...", 
+        "Analizando tu solicitud...", 
+        "Construyendo su sitio web...", 
+        "Componente de elaboración...", 
+        "Optimizando el diseño...", 
+        "Añadiendo toques finales...", 
+        "Casi listo..."
     ];
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
     useEffect(() => {
