@@ -69,4 +69,5 @@ https://e2b.dev/sign-in
 
 https://console.neon.tech/
 
-<img width="1909" height="1137" alt="image" src="https://github.com/user-attachments/assets/5598c267-b8ca-4887-b42d-e560e6d5d188" />
+
+<img width="1919" height="1089" alt="image" src="https://github.com/user-attachments/assets/15e66558-4feb-4fea-b5a0-fe39af2897f7" />
