@@ -58,8 +58,7 @@ e2b template build --name nombre --cmd "/compile_page.sh"
 
 
 ```bash
-e2b template publish -t id_team 
-
+e2b template publish -t id_team
 ```
 
 ## Links SandBox dashboard
@@ -72,3 +71,5 @@ https://console.neon.tech/
 
 ## Login 
 https://clerk.com/
+
+<img width="1919" height="1089" alt="image" src="https://github.com/user-attachments/assets/15e66558-4feb-4fea-b5a0-fe39af2897f7" />
