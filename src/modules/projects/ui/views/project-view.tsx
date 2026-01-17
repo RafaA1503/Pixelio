@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import Link from "next/link"; 
+import { UserButton } from "@clerk/nextjs";
 
 import {
     ResizableHandle,
@@ -13,7 +14,7 @@ import { MessagesContainer } from "../components/messages-container";
 import { Fragment } from "@/generated/prisma";
 import { ProjectHeader } from "../components/project-header";
 import { FragmentWeb } from "../components/fragment-web";
-import { EyeIcon, CodeIcon, CrownIcon } from "lucide-react"; // Remover Link de aquí
+import { EyeIcon, CodeIcon, CrownIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CodeView } from "@/components/code-view";
 import { FileExplorer } from "@/components/file-explorer";
@@ -71,6 +72,13 @@ export const ProjectView = ({ projectId}: Props) =>{
                         <CrownIcon /> Upgrade
                     </Link>
                 </Button>
+                <UserButton 
+                    appearance={{
+                        elements: {
+                            avatarBox: "w-8 h-8 rounded-md"
+                        }
+                    }}
+                />
             </div>
             </div>
             <TabsContent value="preview">
